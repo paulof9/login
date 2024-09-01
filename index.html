@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="bg.css">
+    <title>Login</title>
+</head>
+<body class="h-screen justify-center bg-black">
+    <div class="h-screen flex flex-col justify-center bg">
+        <div class="grid gap-8 items-start justify-center"> 
+            <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#7B1523] rounded-lg blur"></div>
+
+                <div class="relative bg-black rounded-lg flex flex-col md:w-fit w-fit h-30 gap-4 mx-auto p-4 items-center">
+                    <h1 class="text-center text-red-500 text-xl">:p</h1>
+
+                    <form action="cadastro.js" method="POST" autocomplete="on" class="flex flex-col text-white items-center">
+
+                        <div class="flex items-center">
+                            <p><label for="iusername" class="">Username:</label></p>
+                            <input type="text" name="username" id="iusername" placeholder="Your username" required minlength="3" maxlength="20" autocomplete="off" class="bg-white hover:bg-gray-300 rounded-lg border m-1 text-black w-full p-1 pl-2">
+                        </div>
+
+                        <div class="flex items-center">
+                            <p><label  class="" for="ipassword">Password: </label></p>
+                            <input type="password" name="password" id="ipassword" placeholder="Your password" required minlength="6" maxlength="20" autocomplete="current-password" class="bg-white hover:bg-gray-300 rounded-lg border m-1 text-black w-full p-1 pl-2">
+                        </div>
+
+                                <input type="submit" value="Submit" class="bg-white hover:bg-gray-300 mt-4 text-black border w-fit h-10 justify-center px-2 rounded-lg">
+                    </form>
+                </div>
+            </div>
+        </div>   
+    </div> 
+</body>
+</html>
