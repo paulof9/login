@@ -11,25 +11,51 @@
     <div class="h-screen flex flex-col justify-center bg">
         <div class="grid gap-8 items-start justify-center"> 
             <div class="relative">
-            <div class="absolute inset-0 bg-gradient-to-t from-red-500 to-red-900 rounded-lg blur"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-red-500 to-red-900 rounded-lg blur "></div>
 
-                <div class="relative bg-black rounded-lg flex flex-col md:w-fit w-fit h-30 gap-4 mx-auto p-4 items-center">
-                    <h1 class="text-center text-red-500 text-xl">🍅</h1>
+                <div class="relative bg-black rounded-lg grid grid-cols-2 gap-1 items-center md:w-fit md:h-30 md:px-8 px-2 md:py-24 py-12 divide-x divide-red-500 md:m-auto mx-2">
 
-                    <form action="cadastro.js" method="POST" autocomplete="on" class="flex flex-col text-white items-center">
+                    <div class="w-fit pr-2 md:pr-0">
+                        <form action="login.js" method="POST" autocomplete="on" class="flex flex-col text-white">
+                            <h1 class="text-center text-red-500 text-xl mb-4">Join</h1>
 
-                        <div class="flex items-center">
-                            <p><label for="iusername" class="">Username:</label></p>
-                            <input type="text" name="username" id="iusername" placeholder="Your username" required minlength="3" maxlength="20" autocomplete="off" class="bg-white hover:bg-gray-300 rounded-lg border m-1 text-black w-full p-1 pl-2">
-                        </div>
+                            <div class="flex items-center mb-4">
+                                <label for="iemail" class="w-24 text-right pr-5">Email:</label>
+                                <input type="email" name="email" id="iemail" placeholder="Your email" maxlength="30" autocomplete="email" class="bg-white hover:bg-gray-300 rounded-lg border text-black w-full p-1.5">
+                            </div>
 
-                        <div class="flex items-center">
-                            <p><label  class="" for="ipassword">Password: </label></p>
-                            <input type="password" name="password" id="ipassword" placeholder="Your password" required minlength="6" maxlength="20" autocomplete="current-password" class="bg-white hover:bg-gray-300 rounded-lg border m-1 text-black w-full p-1 pl-2">
-                        </div>
+                            <div class="flex items-center mb-4">
+                                <label for="ipassword" class="w-24 text-right pr-1">Password: </label>
+                                <input type="password" name="password" id="ipassword" placeholder="Your password" required minlength="6" maxlength="30" autocomplete="current-password" class="bg-white hover:bg-gray-300 rounded-lg border text-black w-full p-1.5">
+                            </div>
 
-                                <input type="submit" value="Submit" class="bg-white hover:bg-gray-300 mt-4 text-black border w-fit h-10 justify-center px-2 rounded-lg">
-                    </form>
+                            <input type="submit" value="Submit" id="login" class="bg-white hover:bg-gray-300 mt-4 text-black border w-full h-10 justify-center px-2 rounded-lg">
+                        </form>
+                    </div>
+
+                    <div class="w-fit md:pl-8 pl-2">
+                        <form action="cadastro.js" method="post" autocomplete="on" class="flex flex-col text-white">
+                            <h1 class="text-center text-red-500 text-xl mb-4">Log in</h1>
+
+                            <div class="flex items-center mb-4">
+                                <label for="iname" class="w-24 text-right pr-5">Name:</label>
+                                <input type="text" name="name" id="iname" placeholder="Your name" maxlength="30" autocomplete="off" class="bg-white hover:bg-gray-300 rounded-lg border text-black w-full p-1.5">
+                            </div>
+
+                            <div class="flex items-center mb-4">
+                                <label for="iemail2" class="w-24 text-right pr-5">Email:</label>
+                                <input type="email" name="email" id="iemail2" placeholder="Your email" maxlength="30" autocomplete="email" class="bg-white hover:bg-gray-300 rounded-lg border text-black w-full p-1.5">
+                            </div>
+
+                            <div class="flex items-center mb-4">
+                                <label for="ipassword2" class="w-24 text-right pr-1">Password: </label>
+                                <input type="password" name="password" id="ipassword2" placeholder="Your password" required minlength="6" maxlength="30" autocomplete="off" class="bg-white hover:bg-gray-300 rounded-lg border text-black w-full p-1.5">
+                            </div>
+
+                            <input type="submit" value="Log in" id="login2" class="bg-white hover:bg-gray-300 mt-4 text-black border w-full h-10 justify-center rounded-lg">
+                        </form>
+                    </div>
+
                 </div>
             </div>
         </div>   
