@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="bg.css">
-    <title>Login</title>
+    <title>Prisma+sqliteDB (Usar na porta 3000)</title>
 </head>
 <body class="h-screen justify-center bg-black">
     <div class="h-screen flex flex-col justify-center bg">
@@ -16,8 +16,8 @@
                 <div class="relative bg-black rounded-lg grid grid-cols-2 gap-1 items-center md:w-fit md:h-30 md:px-8 px-2 md:py-24 py-12 divide-x divide-red-500 md:m-auto mx-2">
 
                     <div class="w-fit pr-2 md:pr-0">
-                        <form action="login.js" method="POST" autocomplete="on" class="flex flex-col text-white">
-                            <h1 class="text-center text-red-500 text-xl mb-4">Join</h1>
+                        <form action="/login" method="POST" autocomplete="on" class="flex flex-col text-white">
+                            <h1 class="text-center text-red-500 text-xl mb-4">Wellcome back!</h1>
 
                             <div class="flex items-center mb-4">
                                 <label for="iemail" class="w-24 text-right pr-5">Email:</label>
@@ -29,13 +29,13 @@
                                 <input type="password" name="password" id="ipassword" placeholder="Your password" required minlength="6" maxlength="30" autocomplete="current-password" class="bg-white hover:bg-gray-300 rounded-lg border text-black w-full p-1.5">
                             </div>
 
-                            <input type="submit" value="Submit" id="login" class="bg-white hover:bg-gray-300 mt-4 text-black border w-full h-10 justify-center px-2 rounded-lg">
+                            <button type="submit" class="bg-white hover:bg-gray-300 mt-4 text-black border w-full h-10 justify-center px-2 rounded-lg">Submit</button>
                         </form>
                     </div>
 
                     <div class="w-fit md:pl-8 pl-2">
-                        <form action="cadastro.js" method="post" autocomplete="on" class="flex flex-col text-white">
-                            <h1 class="text-center text-red-500 text-xl mb-4">Log in</h1>
+                        <form action="/signup" method="post" autocomplete="on" class="flex flex-col text-white">
+                            <h1 class="text-center text-red-500 text-xl mb-4">Join us!</h1>
 
                             <div class="flex items-center mb-4">
                                 <label for="iname" class="w-24 text-right pr-5">Name:</label>
@@ -44,15 +44,15 @@
 
                             <div class="flex items-center mb-4">
                                 <label for="iemail2" class="w-24 text-right pr-5">Email:</label>
-                                <input type="email" name="email" id="iemail2" placeholder="Your email" maxlength="30" autocomplete="email" class="bg-white hover:bg-gray-300 rounded-lg border text-black w-full p-1.5">
+                                <input type="email" name="email" id="iemail2" placeholder="Your email" maxlength="50" autocomplete="email" class="bg-white hover:bg-gray-300 rounded-lg border text-black w-full p-1.5">
                             </div>
 
                             <div class="flex items-center mb-4">
                                 <label for="ipassword2" class="w-24 text-right pr-1">Password: </label>
-                                <input type="password" name="password" id="ipassword2" placeholder="Your password" required minlength="6" maxlength="30" autocomplete="off" class="bg-white hover:bg-gray-300 rounded-lg border text-black w-full p-1.5">
+                                <input type="password" name="password" id="ipassword2" placeholder="Your password" required minlength="6" maxlength="50" autocomplete="off" class="bg-white hover:bg-gray-300 rounded-lg border text-black w-full p-1.5">
                             </div>
 
-                            <input type="submit" value="Log in" id="login2" class="bg-white hover:bg-gray-300 mt-4 text-black border w-full h-10 justify-center rounded-lg">
+                            <button type="submit" class="bg-white hover:bg-gray-300 mt-4 text-black border w-full h-10 justify-center rounded-lg">Log in</button>
                         </form>
                     </div>
 
@@ -60,5 +60,6 @@
             </div>
         </div>   
     </div> 
+    <script src="app.js"></script>
 </body>
 </html>
